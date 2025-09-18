@@ -1,0 +1,79 @@
+#erroTokenCaixa{
+    display: none;
+    padding: 10px;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 220px;
+}
+
+#msgErroToken{
+    font-size: 2rem;
+    color: #e84e83;
+}
+
+#voltar{
+    background-color: #60c2c9;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+#caixaNovaSenha {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+    background-color: #f5f5f5;
+}
+
+#caixaNovaSenha > input {
+    margin-bottom: 5px;
+    width: 90%;
+    border: none;
+    padding: 5px 10px;
+    resize: none;
+    font-style: italic;
+    display: block;
+}
+
+#caixaNovaSenha span {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#cadastrar {
+    background-color: #60c2c9;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 285px;
+    margin: 25px 0px;
+}
+
+#caixaNovaSenha span {
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: #e84e83;
+}
+
+#msgErroNewPwd{
+    opacity: 0;
+}
+
+@media (max-width: 992px){
+    #tela1>div:nth-of-type(1) {
+        text-align: initial;
+    }
+}

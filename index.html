@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description" content="">
+
+  <title>Univesp | Design de Cursos</title>
+
+  <link rel="shortcut icon" href="https://apps.univesp.br/common/favicon.ico" type="image/x-icon" />
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+  <!-- Animate CSS. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css"> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
+  <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/modulo.css">
+  <link rel="stylesheet" href="stylesheets/materiais.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Menu -->
+  <!--///////////////////////////////////////////////////////////////
+  Classe para nav
+  - padrão => header estático
+  - class="header-dinamico" => header possui posição fixa e é mostrado apenas quando a página está no topo (necessário ajustar padding ou margin superior e inferior do main).
+  //////////////////////////////////////////////////////////////////-->
+  <!-- <nav class="header-dinamico"> -->
+  <nav>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/traco-negativa.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp, sendo a letra V estilizada.">
+          <!-- outras opções de img src: colorida-negativa.svg, traco-positiva.svg, traco-negativa.svg -->
+        </a>
+      </div>
+      <!-- Compartilhamento -->
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="header-fixo">
+    <!-- <div id = "gravar" data-usado = "ativo" data-atual = "true">Gravar</div> -->
+    <div data-id = "etapa1" data-usado = "inativo" data-atual = "false">Etapa 1</div>
+    <div data-id = "etapa2" data-usado = "inativo" data-atual = "false">Etapa 2</div>
+    <div data-id = "etapa3" data-usado = "inativo" data-atual = "false">Etapa 3</div>
+    <div data-id = "etapa4" data-usado = "inativo" data-atual = "false">Etapa 4</div>
+    <div data-id = "etapa5" data-usado = "ativo" data-atual = "true" id='downloadModelo'>Veja exemplo preenchido</div>
+  </div>
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+
+    <div id = "header-cont">
+      <div id = "header-aluno"></div>
+      <div id = "header-email"> </div>
+    </div>
+
+    <div class="container" id="tela1">
+      <!-- Seu conteúdo -->
+      <div>
+        <img src="assets/arte-01.png"></img>
+        <p>Pesquisas recentes identificam que a maior parte dos professores não se sente segura ou bem formada para realizar a sua docência mediatizada por tecnologias. Não tiveram maior contato com o potencial das tecnologias mais recentes para auxiliá-los em seu planejamento e sua intervenção educacional.</p>
+        <p>Assuma aqui o papel de designer educacional e siga as etapas para planejar um pequeno curso on-line. No final, você terá nas mãos um documento estruturado que lhe permitirá colocar em prática seu planejamento. E, embora não seja nosso objetivo com este REA, você pode utilizá-lo também para planejar uma sequência didática em um curso presencial.</p>
+        
+        <!-- Tela 1  - Caixa de decisão -->
+        <div id='caixaDecisao'>
+          <div id='primeiroAcesso'>É meu primeiro acesso</div>
+          <div id='jaSouCadastrado'>Já sou cadastrado</div>
+        </div>
+
+        <!-- Tela 2 - Cadastro -->
+        <div id='caixaCadastro'>
+          <p id='aviso'><b>Importante:</b> este é um recurso educacional e não uma plataforma que oferece serviços. Nós garantimos apenas que o recurso funcione para os fins para os quais foi criado.</p>
+          <span id='mensagemErroCadastro'>ERRO</span>
+          <span>Digite seu nome:</span>
+          <input type="text" id="nomeCadastro" placeholder="Digite seu nome.">
+          <span>Digite o seu email:</span>
+          <input type="text" id="emailCadastro" placeholder="Digite o seu email">
+          <span>Digite sua senha:</span>
+          <input type="password" id="pwdCadastro" placeholder="Digite sua senha">
+          <span>Confirme sua senha:</span>
+          <input type="password" id="pwdRepeteCadastro" placeholder="Digite sua senha novamente.">
+          <div id='cadastrar'>CADASTRAR</div>
+          <div id='btnCadVoltar'>
+            <i class="fas fa-undo"></i>
+          </div>
+        </div>
+
+        <!-- Tela 3 - Login -->
+        <div id="caixaRA">
+          <div>
+            <span id = "mensagemErro">Digite um email válido</span>
+            <span>Digite o seu email:</span>
+            <input type = "text" id="emailLogin" placeholder="Digite o seu email" data-placeholder = "Digite o seu email"></input>
+            <span>Digite a senha:</span>
+            <input type = "password" name="" id="pwdLogin" placeholder="Digite sua senha" data-placeholder = "Digite sua senha"></input>
+          </div>
+          <div id='btnEntrar'>ENTRAR</div>
+          <div id='btnRedirectReiniciaSenha'>REDEFINIR SENHA</div>
+          <div id='btnCadRA'>
+            <i class="fas fa-undo"></i>
+          </div>
+        </div>
+        
+      </div>
+      <div>
+        <img src="assets/arte-02.png">
+      </div>
+
+
+    </div>
+
+    <div class="faixa faixaEsquerda" id=''>Etapa 1: Tema, justificativa e público-alvo</div>
+
+    <div class="container espSupGrn espPqn" id="etapa1">
+      <p>O primeiro passo de qualquer planejamento educacional é a definição do tema que se quer abordar. Assunto não falta; a dificuldade está em escolher um tema que não seja abrangente demais ou tão restrito que não interesse a quase ninguém.</p>
+      <p>Aliás, a definição de um tema para um curso está no cruzamento de dois eixos: o que faz parte do meu centro de interesses? O que interessa aos outros (ou o que os outros estão buscando por alguma necessidade)? Por isso não adianta nada definir um tema sem pensar também nas pessoas que você quer atingir com esse curso.</p>
+      <div class='caixaComImagemCentralizada espSupGrn'>
+        <img src="assets/arte-03.png" alt="">
+      </div>
+      <p class='espSupGrn'>Vamos agora preencher nosso primeiro quadro:</p>
+      <div id="txtInfo">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span>As informações que estão nos campos são apenas um exemplo de preenchimento e não serão salvas ou impressas no final do seu trabalho</span>
+       </div>
+      <div class='caixaCinza espSupGrn'>
+        <p>Integrante:</p>
+        <input onfocus="this.placeholder = ''" onblur="this.placeholder = 'Keite Silva de Melo, Alfredo Salvador Vieira Coelho'" id = "integrantes" type="text" name="" value="" placeholder="Keite Silva de Melo, Alfredo Salvador Vieira Coelho">
+        <p>Tema do curso:</p>
+        <input onblur="this.placeholder = 'Design de curso'" onfocus="this.placeholder = ''" type="text" id = "tema" name="" value="" placeholder="Design de curso">
+        <p>Público alvo:</p>
+        <input onblur="this.placeholder = 'Alunos da disciplina Design Educacional das licenciaturas da UNIVESP'" onfocus="this.placeholder = ''" type="text" id = "publico" name="" value="" placeholder="Alunos da disciplina Design Educacional das licenciaturas da UNIVESP">
+        <p>Justificativa:</p>
+        <textarea onblur="this.placeholder = 'A proposta é implementar os saberes que estão sendo internalizados na disciplina Design Educacional, para oferecer um apoio aos professores que estão adotando o ensino remoto emergencial, sem formação prévia para tal, neste momento de suspensão das aulas presenciais. Pesquisas recentes identificam que a maior parte dos professores não se sente segura ou bem formada para realizar a sua docência mediatizada por tecnologias. Não tiveram maior contato     com o potencial das tecnologias mais recentes, para lhes auxiliar em seu planejamento e intervenção educacional.'" onfocus="this.placeholder = ''" id = "justificativa" name="name" rows="6" cols="80"
+          placeholder="A proposta é implementar os saberes que estão sendo internalizados na disciplina Design Educacional, para oferecer um apoio aos professores que estão adotando o ensino remoto emergencial, sem formação prévia para tal, neste momento de suspensão das aulas presenciais.
+                        Pesquisas recentes identificam que a maior parte dos professores não se sente segura ou bem formada para realizar a sua docência mediatizada por tecnologias. Não tiveram maior contato com o potencial das tecnologias mais recentes, para lhes auxiliar em seu planejamento e intervenção educacional."></textarea>
+      </div>
+    </div>
+
+    <div class="container caixaGravar espSupGrn" id = 'caixaGravar1'>
+      <div>GRAVAR INFORMAÇÕES</div>
+      <span>Seus dados foram salvos com sucesso!</span>
+    </div>
+
+    <div class="faixa faixaDireita espSupGrn">Etapa 2: Carga horária, módulos, objetivos e avaliação</div>
+
+    <div class="container espSupGrn" id="etapa2">
+      <p>Agora que você já definiu o tema do seu curso e o público-alvo, é preciso detalhar o planejamento.</p>
+
+      <div id="carousel1" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p>Comece definindo quanto tempo esse curso vai durar.</p>
+            <p>Ah! Mas você deseja deixar o curso aberto indefinidamente para que as pessoas possam entrar e sair quando quiserem…</p>
+            <p>Tudo bem. Só que o conteúdo que você está disponibilizando equivale a quanto tempo de atividade do cursista? Além disso, se você pudesse emitir um certificado de participação em seu curso, qual a carga horária que você iria atestar? Por fim, definir a carga horária vai ajudar a delimitar a quantidade de material que você vai colocar em seu curso.</p>
+          </div>
+          <div class="carousel-item">
+            <p>Outra coisa importante a definir: você vai apresentar tudo de uma vez sobre o tema? Ou vai dividir a apresentação em blocos ou módulos? Esses módulos têm uma sequência que precisa ser seguida para que as pessoas entendam ou elas podem começar por qualquer módulo?</p>
+            <p>Perceba que você vai precisar definir a carga horária que cada módulo vai ter. Você pode dividir a carga horária total igualmente em cada módulo ou ter módulos com duração maior que outros; e isso não é problema algum.</p>
+          </div>
+          <div class="carousel-item">
+            <p>Uma outra coisa a definir, nesta etapa, são os objetivos de aprendizagem: o que você quer que a pessoa consiga aprender ao final de cada módulo? O que você quer que a pessoa consiga aprender ao final do curso?</p>
+            <p>Por último, você precisa indicar como irá avaliar se as pessoas alcançaram ou não os objetivos (gerais e específicos) que você propôs para o curso.</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"><div class='left'></div></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"><div class="right"></div> </span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="caixaBolinnhas espSupGrn carousel1">
+        <div>
+          <span class='ativo'></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <p class='espSupGrn'>Vamos agora preencher nosso segundo quadro:</p>
+
+      <div class="caixaCinza objGerais">
+        <p>Objetivos gerais</p>
+        <textarea id="objetivos" name="name" rows="2" cols="80" placeholder="Possibilitar que cada estudante assuma o papel de designer educacional e desenhe uma breve formação para os professores lidarem com o desafio de realizarem sua docência mediatizada por tecnologias em tempos de pandemia" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Possibilitar que cada estudante assuma o papel de designer educacional e desenhe uma breve formação para os professores lidarem com o desafio de realizarem sua docência mediatizada por tecnologias em tempos de pandemia'"></textarea>
+      </div>
+    </div>
+
+    <div class='container espSupGrn' id = 'etapa2resto'>
+      <div class="moduloResto espSupGrn">
+        <div>
+          <div>
+            <p>Carga horária total</p>
+            <input type="text">
+          </div>
+          <div>
+            <p>Sequência</p>
+            <input type="text">
+          </div>
+          <div>
+            <p>Carga Horária</p>
+            <input type="text">
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>avaliação</p>
+            <textarea rows="4" cols="80"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container caixaGravar espSupGrn" id = 'caixaGravar2'>
+      <div>GRAVAR INFORMAÇÕES</div>
+      <span>Seus dados foram salvos com sucesso!</span>
+    </div>
+
+    <div class="faixa faixaEsquerda">Etapa 3: Atividades e materiais</div>
+
+    <div class="container espSupPqn" id="etapa3">
+      <p class='espSupPqn'>Chegamos à última etapa de nosso trabalho. Depois disso, você pode encarar algum dos muitos ambientes virtuais de aprendizagem (AVAs) e implementar o curso que está planejando. </p>
+
+      <div id="carousel2" class="carousel slide espSupGrn">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p>Nesta etapa, você vai detalhar o que as pessoas vão encontrar em cada bloco de seu curso e as diferentes atividades e formas de interação com o conteúdo e com as outras pessoas. A esse detalhamento chamamos de roteiro.</p>
+          </div>
+          <div class="carousel-item">
+            <p>Do ponto de vista de um curso EaD, as atividades podem ser síncronas ou assíncronas. Atividades síncronas são aquelas em que as pessoas envolvidas estão todas no ambiente ao mesmo tempo realizando a mesma atividade, como um chat ou uma live. A maior parte das atividades costuma ser assíncrona, sendo realizadas no momento em que a pessoa considerar mais conveniente.</p>
+          </div>
+          <div class="carousel-item">
+            <p>Quanto aos materiais que você pode disponibilizar, há vídeos e textos, entre outros, que podem estar dentro da plataforma ou serem externos, acessados por meio de links. Esses materiais podem ser básicos, isto é, de consulta obrigatória, ou podem ser disponibilizados para servir de apoio ou complemento ao que está sendo apresentado.</p>
+          </div>
+          <div class="carousel-item">
+            <p>Os materiais de apoio ou complementares podem se enquadrar em duas situações mais comuns: </p>
+            <ul>
+              <li>servirem para revisar conhecimentos que as pessoas deveriam ter e são úteis para entender o que está sendo apresentado (normalmente aparecem no início) ou</li>
+              <li>servirem para as pessoas se aprofundarem no tema estudado (normalmente aparecem no final)</li>
+            </ul>
+          </div>
+          <div class="carousel-item">
+            <p>Todo roteiro costuma ter elementos comuns, que servem para que o usuário se sinta em casa no ambiente virtual de aprendizagem. Pense, então, em incluir um texto de abertura e de encerramento em cada módulo. Analise se é o caso de ter ou não no módulo um fórum de debates ou uma atividade avaliativa.</p>
+            <p>Algo bem interessante para incluir em seu roteiro é uma situação-problema, a fim de provocar o interesse de seu público-alvo no aprendizado que está sendo proposto no módulo.</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"><div class='left'></div></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"><div class="right"></div> </span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="caixaBolinnhas espSupGrn carousel2">
+        <div>
+          <span class='ativo'></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <p class = 'espSupGrn'>Vamos agora preencher nosso último quadro:</p>
+
+      <div id= 'blocaoEtapa3FaixaVerde'>
+        <div id='faixinhaLateral'></div>
+        <div>
+          <div id = "caixaEtapa3">
+              <p style='font-weight: bold'>Módulo</p>
+              <div>
+              <!-- <span>Nome de módulo que foi colocado anteriormente</span> -->
+                <select id = 'select'></select>
+              </div>
+            <div id='caixaSelect' class='espSupPqn'></div>
+          </div>
+          <div class='espSupGrn caixaDosMateriais'></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container caixaGravar espSupGrn" id = 'caixaGravar3'>
+      <div>GRAVAR INFORMAÇÕES</div>
+      <span>Seus dados foram salvos com sucesso!</span>
+    </div>
+
+    <div class="faixa faixaDireita" id=''>Etapa 4: Projeto de curso e roteiros</div>
+
+    <div class="container espSupGrn" id="etapa4">
+      <p>Você chegou ao fim de seu trabalho.</p>
+      <p>Confira agora seu projeto de curso e os roteiros dos módulos que você estruturou. Se estiver tudo bem, é só imprimir ou salvar. Caso queira modificar alguma coisa, é só retornar até a etapa correspondente e editar o que for necessário.</p>
+      <p>Ah! E se você ainda não baixou o nosso exemplo preenchido, sugerimos que o faça antes de ir embora. Ali estão indicados muitos bons materiais de consulta sobre como desenvolver o trabalho de designer educacional.</p>
+      <div id='caixaSimulacaoImpressao' class = 'espSupGrn'>
+        <iframe id = "iframe" style="width: 100%; height: 80vh" src=""></iframe>
+      </div>
+
+      <div id='caixaDoBotaoImprimir' class='espSupGrn'>
+        <a download>DOWNLOAD</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <!--//////////////////////////////////////////////////////
+  Classes prontas p/ footer (podem ser combinadas):
+  padrão => texto e contornos em cinza
+  class = "black" => texto e contornos em preto
+  class = "negativo" => texto e contornos em branco, sobre fundo escuro
+  class = "transparente" => fundo transparente (necessário ajustar cor dos ícones de compartilhamento nos círculos, para bater com a cor de fundo)
+  /////////////////////////////////////////////////////////-->
+  <!-- <footer class="black"> -->
+  <!-- <footer class="negativo"> -->
+  <!-- <footer class="transparente"> -->
+  <!-- <footer class="transparente black"> -->
+  <!-- <footer class="transparente negativo"> -->
+  <footer>
+    <div class="container d-flex justify-content-between">
+
+      <div class="cred-rea">
+        <!-- Comente em caso de adaptação do REA -->
+        <div>Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2020.txt" target="_blank">MIT</a>.
+          Você pode utilizá-lo, compartilhá-lo e modificá-lo.</div>
+        <div><button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button></div><!--
+        <div><a href="#" target="_blank" aria-label="GitHub" style="white-space:nowrap;">GitHub <i class="fab fa-github"></i></a></div> -->
+        <div>Compartilhe: <div class="sharing"></div>
+        </div>
+
+        <!-- Descomente em caso de adaptação do REA -->
+        <!-- <p>
+          <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+          <span><a href="#">Versão original da Univesp</a></span>
+        </p> -->
+      </div>
+
+      <!-- FORMULÁRIOS DE AVALIAÇÃO -->
+      <div class="aval-rea d-flex">
+        <!-- AVALIAR RECURSO -->
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://forms.office.com/r/rP4YWMd2cS" target="_blank">Avaliar este recurso</a>
+        <!-- REPORTAR ERRO -->
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://forms.office.com/r/BU3heRJ9ZP" target="_blank">Reportar erro</a>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- //////////////////////////////////////////////////////////
+  AVISO =+960px
+  Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar
+  ///////////////////////////////////////////////////////////////-->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- CRÉDITOS -->
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
+
+          <h6>Equipe</h6>
+          <p><span class="funcao">Docente responsável</span>Keite Silva de Melo</p>
+          <p><span class="funcao">Coordenação</span>Édison Trombeta</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span>Alfredo Salvador Vieira Coelho</p>
+          <p><span class="funcao">Layout</span>Natasha Higa</p>
+          <p><span class="funcao">Programação</span>Alberto Ortiz Mendes</p>
+          <p><span class="funcao">Revisão</span>July Santos</p>
+
+        </div>
+        <div class="modal-footer">
+          <p>Outubro/2020</p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $(".sharing");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [{
+          share: "facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="javascripts/entrar.js"></script>
+  <script type="text/javascript" src="javascripts/primeiraTela.js"></script>
+  <script type="text/javascript" src="javascripts/cadastro.js"></script>
+  <script type="text/javascript" src="javascripts/generic.js"></script>
+  <script type="text/javascript" src="javascripts/objeto.js"></script>
+  <script type="text/javascript" src="javascripts/banco.js"></script>
+  <script type="text/javascript" src="javascripts/events.js"></script>
+  <script type="text/javascript" src="javascripts/reset.js"></script>
+  <script type="text/javascript" src="javascripts/impressao.js"></script>
+  <script type="text/javascript" src="javascripts/modulo.js"></script>
+  <script type="text/javascript" src="javascripts/materiais.js"></script>
+
+
+  <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+  <!-- Analytics. Remova em caso de reutilização do REA -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+</body>
+
+</html>

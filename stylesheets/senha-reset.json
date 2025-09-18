@@ -1,0 +1,16 @@
+[
+    {
+        "senha-reset-id" : "01",
+        "senha-reset-email": "",
+        "senha-reset-selector":"",
+        "senha-reset-token":"",
+        "senha-reset-expires":""
+    },
+    {
+        "senha-reset-id" : "01",
+        "senha-reset-email": "",
+        "senha-reset-selector":"",
+        "senha-reset-token":"",
+        "senha-reset-expires":""
+    }
+]
